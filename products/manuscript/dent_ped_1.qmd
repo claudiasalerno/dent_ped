@@ -1,0 +1,20 @@
+---
+title: "day 2 prova"
+author: "Claudia Salerno"
+format: html
+editor: visual
+---
+
+## Introduction
+
+Pediatric dentistry plays a pivotal role in ensuring the oral health and well-being of children, starting from infancy through adolescence. Early intervention and education are paramount in preventing oral diseases and establishing healthy dental habits that can last a lifetime. While both dentists and pediatricians are integral members of the healthcare team for children, their roles, expertise, approaches and timing to pediatric oral health may differ. The aim of this paper is to compare the knowledge, attitudes, and practices regarding pediatric dentistry between dentists and pediatricians. By examining the perspectives of these two healthcare professionals, we seek to identify potential areas of collaboration, opportunities for interdisciplinary education, and strategies for improving pediatric oral health outcomes.
+
+Understanding the similarities and differences in knowledge and practices between dentists and pediatricians is crucial for developing comprehensive and integrated approaches to pediatric dental care. By elucidating the strengths and challenges within each profession, we can enhance communication, coordination, and referral pathways to ensure optimal oral health outcomes for children. Moreover, addressing any gaps in knowledge or misconceptions may lead to more effective preventive measures and early interventions, ultimately reducing the burden of oral diseases in pediatric populations.
+
+Therefore, the aim is to contribute to the advancement of pediatric dental care and the promotion of interdisciplinary collaboration between dentists and pediatricians understanging the knwoledge gap on oral health between these two mediacl figures.
+
+## Materials and Methods
+
+A web-based questionnaire was created and distributed online to pediatricians and dentists who decided to take a course on pediatric dentistry. The questionnaire could be fulfilled before the course start.
+
+## Results
