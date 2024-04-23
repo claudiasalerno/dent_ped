@@ -1,8 +1,13 @@
 ---
-title: "day 2 prova"
+title: "CS_Project"
 author: "Claudia Salerno"
-format: html
-editor: visual
+format: 
+  html:
+    fig-width: 8
+    fig-height: 4
+    code-fold: true
+    message: false
+    embed-resources: true
 ---
 
 ## Introduction
@@ -19,4 +24,63 @@ A web-based questionnaire was created and distributed online to pediatricians an
 
 ## Results
 
-hello
+```{r}
+library(ggplot2)
+library(readxl)
+library (readr)
+library (here)
+
+original_dataset <- read_xlsx(here("data", "raw", "doctor.xlsx"))  # Assicurati di sostituire "nome_del_tuo_file.csv" con il percorso corretto del tuo file
+
+# Filtra le righe dove "di quale disciplina ti occupi" è "pediatria" e seleziona solo le prime 18 colonne
+new_dataset <- subset(original_dataset, select = 1:5)
+
+# Stampa il nuovo dataset
+print(new_dataset)
+```
+
+@fig-doctors_distribution explores the type of doctors that answered to the questionnaire.
+
+@fig-doctors_years explores years of experience for each type of doctors that answered to the questionnaire.
+
+@fig-doctors_know explores doctors' knowledge on the correct number of primary teeth
+
+```{r}
+#| label: fig-doctors_distribution
+#| fig-cap: Type of doctors.
+#| warning: false
+ggplot(data = new_dataset, aes(x = disciplina, fill = disciplina)) + 
+geom_bar() + labs(title = "Doctor specialization distribution", 
+x = "Specialization", 
+y = "Count") + 
+scale_fill_manual(values = c("lightcoral", "indianred", "firebrick", "darkred")) + theme_minimal()
+```
+
+```{r}
+#| label: fig-doctors_years
+#| fig-cap: Work experience for each type of doctor.
+#| warning: false
+
+ggplot(data = new_dataset, aes(x = disciplina, fill = work_experience)) +
+  geom_bar(position = "dodge", width = 0.7) +
+  labs(title = "Type of doctor and years of experience",
+       x = "disciplina",
+       y = "Count") +
+  scale_fill_manual(values = c("lightcoral", "lightblue", "lightgreen", "lightyellow", "darkorange")) +  # Specifica i colori per le risposte alla variabile 2
+  theme_minimal()
+```
+
+```{r}
+#| label: fig-doctors_know
+#| fig-cap: Number of primary teeth knowledge for each type of doctor.
+#| warning: false
+ggplot(data = new_dataset, aes(x = disciplina, fill = factor(dent_decidui_numb <= 20))) +
+  geom_bar(position = "dodge") +
+  labs(title = "Number of doctors and knowledge on primary teeth number",
+       x = "Disciplin",
+       y = "Count",
+       fill= "Legend") +
+  scale_fill_manual(values = c("lightgreen", "lightcoral"),
+                    labels = c("20", "less than 20")) +  # Etichette per i colori
+  theme_minimal()
+```
